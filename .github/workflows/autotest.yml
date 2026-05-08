@@ -3,7 +3,7 @@ name: Kiểm tra tự động khi push
 
 on:
   push:
-    branch: main 
+    branches: ['main'] 
 
 
 jobs:
