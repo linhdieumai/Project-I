@@ -1,0 +1,25 @@
+# tên workflow
+name: Kiểm tra tự động khi push
+
+on:
+  push:
+    branch: main 
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # bước 1
+    - name: lấy code từ repo
+    - uses: actions/checkout@v4
+
+    # bước 2
+    - name: câu lệnh chào
+      run: echo "máy chủ đang kiểm tra ..."
+
+    # Bước 3
+    - name: kiểm tra version của node
+      run: node -v
